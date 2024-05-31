@@ -5,3 +5,8 @@
 先clone整個MeTRAbs檔案，並把MeTRAbs所需的環境安裝好，能夠運行原論文的demo，模型權重請參考[連結](https://omnomnom.vision.rwth-aachen.de/data/metrabs/)  
 安裝opencv-python，並將所有本專案中的.py檔放入MeTRAbs資料夾中即可運行
 # 程式功能及運行
+test_screen.py執行後，會在偵測螢幕上的部份畫面，辨識畫面中的骨架，只須將圖片或影片拉到特定區域，即可快速查看骨架提取效果    
+test_vid.py執行後，會讀取影片並將骨架圖儲存下來查看結果  
+vid_to_txt.py執行後會將每一個影片的骨架序列儲存成單獨的npy檔，方便視覺化跟後續dataset處理  
+normalize.py會將每一個npy檔在xyz軸座標分別做歸一化至0～1之間  
+transform.py會將所有類別分割為train和test
