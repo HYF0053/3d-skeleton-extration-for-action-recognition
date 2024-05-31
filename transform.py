@@ -58,8 +58,9 @@ def split_and_save_npz(parent_folder, output_path, test_size=0.3):
     print(f"Data saved to {output_path}")
 
 if __name__ == '__main__':
-    # Assuming your parent directory is './normalize'
-    parent_folder = './normalize'
-    output_path = './normalize/tiktok.npz'
+    parent_folder = input('folder_path:')
+    output_path = input('output_path:')  
+    if not os.path.exists(output_path):
+        os.makedirs(output_path) 
     # Create the combined npz file
     split_and_save_npz(parent_folder, output_path)
