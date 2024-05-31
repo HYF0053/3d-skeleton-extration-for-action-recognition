@@ -7,6 +7,6 @@
 # 程式功能及運行
 test_screen.py執行後，會在偵測螢幕上的部份畫面，辨識畫面中的骨架，只須將圖片或影片拉到特定區域，即可快速查看骨架提取效果    
 test_vid.py執行後，會讀取影片並將骨架圖儲存下來查看結果  
-vid_to_txt.py執行後會將每一個影片的骨架序列儲存成單獨的npy檔，方便視覺化跟後續dataset處理  
+vid_to_txt.py執行後會將每一個影片的骨架序列儲存成單獨的npy檔（c,t,j,m），方便視覺化跟後續dataset處理 ，辨識中可以設定超過或不等於幾個人就不儲存，固定輸出的大小一致 
 normalize.py會將每一個npy檔在xyz軸座標分別做歸一化至0～1之間  
-transform.py會將所有類別分割為train和test
+transform.py會將所有類別分割為train和test，前處理會將其時間長度padding或減少至相同，存成單一npz檔(b,c,t,j,m)  
